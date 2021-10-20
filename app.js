@@ -2,6 +2,7 @@ let express = require("express");
 let app = express();
 const port= 3030;
 let path = require("path");
+app.use(express.static("public"));
 
 app.get("/",(req , res)=>{
     res.sendFile(path.join(__dirname,"/views/index.html"))
